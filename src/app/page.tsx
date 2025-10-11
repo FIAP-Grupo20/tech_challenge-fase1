@@ -4,10 +4,16 @@ import { ChangeEvent, useState } from "react";
 import styles from "./page.module.css";
 import InputComponente from "@/components/Input/Input";
 import SelectComponente from "@/components/Input/Select";
+import ContainerSaldo from "@/components/saldo/container";
+import ModalEditarTransacao from "@/components/editar-transacao/modal";
 
 export default function Home() {
   const [valorInput, setValorInput] = useState<string | number>("");
   const [valorSelect, setValorSelect] = useState<string | number>("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const username = "João";
+  const data = "Quarta-feira, 12/10/2025";
+  const valor = 1250.50;
 
   return (
     <div className={styles.page}>
@@ -34,6 +40,21 @@ export default function Home() {
         ]}
         label={"Select modelo"}
       />
+
+      <ContainerSaldo 
+        key={username}
+        username={username} 
+        data={data}
+        valor={valor}
+      />
+
+      <ModalEditarTransacao
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
+
+      <button onClick={() => setIsModalOpen(true)}>Editar Transação</button>
     </div>
+    
   );
 }
