@@ -1,7 +1,7 @@
 export interface iDimensoes {
   height?: string;
   width?: string;
-  marign?: string;
+  margin?: string;
   padding?: string;
 }
 

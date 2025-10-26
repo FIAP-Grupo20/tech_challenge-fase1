@@ -19,7 +19,7 @@ export default function InputComponente(props: iInput) {
         style={{
           height: props.height || "48px",
           width: props.width || "100%",
-          margin: props.marign || "0",
+          margin: props.margin || "0",
           padding: props.padding || "12px 16px",
           backgroundColor: props.backgroundColor || "var(--branco)",
           border: props.border || "1px solid var(--azul)",
