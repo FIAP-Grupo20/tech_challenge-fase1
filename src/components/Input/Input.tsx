@@ -1,11 +1,11 @@
 import { iInput } from "@/types/iInput";
-import { Form } from "react-bootstrap";
+import { Form, InputGroup } from "react-bootstrap";
 
 export default function InputComponente(props: iInput) {
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+    <InputGroup style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
       {props.label && (
-        <Form.Label htmlFor={props.id} style={{fontWeight: "600", fontSize: "16px", color: "var(--cinza)"}}>
+        <Form.Label htmlFor={props.id} style={{fontWeight: "600", fontSize: "16px", color: "var(--azul)"}}>
           {props.label}
         </Form.Label>
       )}
@@ -16,6 +16,7 @@ export default function InputComponente(props: iInput) {
         onChange={props.onChange}
         id={props.id}
         disabled={props.disabled}
+        aria-describedby="input-base"
         style={{
           height: props.height || "48px",
           width: props.width || "100%",
@@ -29,6 +30,6 @@ export default function InputComponente(props: iInput) {
           textAlign: props.textAlign || "left",
         }}
       ></Form.Control>
-    </div>
+    </InputGroup>
   );
 }

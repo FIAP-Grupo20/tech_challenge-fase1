@@ -9,7 +9,7 @@ const defaultLinks: iSidebarLink[] = [
   { href: "#", label: "Outros serviços" },
 ];
 
-export default function Sidebar(props: iSidebar) {
+export default function SidebarComponente(props: iSidebar) {
   const [activeLabel, setActiveLabel] = useState<string>("Início");
 
   const {
@@ -21,11 +21,11 @@ export default function Sidebar(props: iSidebar) {
     width: props.width || "200px",
     backgroundColor: props.backgroundColor || "var(--branco)",
     color: props.color || "var(--azul)",
-    height: props.height || "100vh",
+    height: props.height || "100%",
     padding: props.padding || "16px",
-    margin: props.margin || 0,
+    margin: props.margin || "0px 0px 24px 0px",
     border: props.border,
-    borderRadius: props.borderRadius,
+    borderRadius: props.borderRadius || "8px",
     fontSize: props.fontSize || "16px",
     fontWeight: props.fontWeight,
     fontFamily: props.fontFamily,
@@ -35,7 +35,7 @@ export default function Sidebar(props: iSidebar) {
     display: props.display || "flex",
     flexDirection: props.flexDirection || "column",
     gap: props.gap || "12px",
-    position: props.position || "fixed",
+    position: props.position || "relative",
     top: props.top || 0,
     left: props.left || 0,
     zIndex: props.zIndex || 1000,

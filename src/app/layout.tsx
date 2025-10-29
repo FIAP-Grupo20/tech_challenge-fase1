@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header/Header";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,12 +19,21 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const userName = "Joana da Silva Oliveira";
   return (
     <html lang="en">
       <head>
         <link rel="icon" href="./icon.svg" type="image/svg" />
       </head>
-      <body className={`${inter.variable}`}>{children}</body>
+
+      <body className={`${inter.variable}`}>
+      <Header 
+        clientName={userName} 
+      />
+        <div className="containerClient"> 
+          {children} 
+        </div>
+      </body>
     </html>
   );
 }
