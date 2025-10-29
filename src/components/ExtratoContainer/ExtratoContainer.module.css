@@ -1,0 +1,60 @@
+.extratoContainer {
+    background-color: var(--branco);
+    height: 88vh;
+    min-height: 30vh;
+    border-radius: 8px;
+    padding: 24px 24px 0px 24px;
+
+    .extratoHeader {
+        display: flex;
+        margin-bottom: 10px;
+
+        h1 {
+            font-weight: 700;
+            font-size: 25px;
+        }
+    }
+
+    .extratoLista {
+        height: 80vh;
+        overflow-y: auto;
+
+        .extratoMes {
+            h5 {
+                font-weight: 600;
+                font-size: 13px;
+                color: var(--verde);
+                margin-top: 30px;
+            }
+
+            .extratoDia {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 0px;
+                .extratoDiaHeader {
+                    display: grid;
+                    gap: 5px;
+
+                    p {
+                        font-weight: 400;
+                        font-size: 16px;
+                    }
+
+                    h5 {
+                        font-weight: 500;
+                        font-size: 16px;
+                        margin: 0px;
+                        color: var(--preto)
+                    }
+
+                    span {
+                        font-weight: 400;
+                        font-size: 13px;
+                        color: #8B8B8B;
+                    }
+                }
+            }
+        }
+    }
+}
