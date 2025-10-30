@@ -27,18 +27,22 @@ Este projeto foca na construção de uma interface rica e funcional para um app 
 
 O projeto cumpre com os seguintes requisitos funcionais:
 
-* **Home Page:**
+- **Home Page:**
   * Container com boas-vindas ao usuário.
   * Exibição do saldo da conta corrente e extrato das últimas transações.
   * Seção para iniciar uma nova transação (seleção de tipo, valor e descrição).
-* **Listagem de Transações:**
-  * Um container que exibe a lista completa de transações realizadas.
-* **Gerenciamento de Transações:**
+ 
+ - **Listagem de Transações:**
+   - Um container que exibe a lista completa de transações realizadas.
+
+- **Gerenciamento de Transações:**
   * É possível **visualizar detalhes**, **editar** e **deletar** cada transação.
-* **Adicionar Nova Transação:**
-  * Um container dedicado para adicionar uma nova transação.
+
+- **Adicionar Nova Transação:**
+    - Um container dedicado para adicionar uma nova transação.
   * Formulário com campos para tipo de transação, valor, data e descrição.
-* **Editar Transação:**
+    
+- **Editar Transação:**
   * Um modal para editar as informações de uma transação existente.
 
 <br />
@@ -114,4 +118,4 @@ Um vídeo de até 5 minutos foi gravado para demonstrar todo o fluxo do front-en
 
 ***
 
-Feito por **Isabelle D. R. Silva (RM367409), Kevin L. Santos (RM) e Mariana Ayumi Tamay (RM367047).**
+Feito por **Isabelle D. R. Silva (RM367409), Kevin L. Santos (RM369050) e Mariana Ayumi Tamay (RM367047).**
