@@ -48,7 +48,7 @@ export default function ExtratoContainer({ extratos, setExtratos }: ExtratoConta
                     Extrato
                 </h1>
             </div>
-            <div className={styles.extratoLista}>
+            <div className={styles.extratoLista} style={{color: "black"}}>
                 {extratos.map((extrato, index) => (
                     <div key={index}>
                         <div className={styles.extratoMes}>

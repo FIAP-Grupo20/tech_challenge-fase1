@@ -4,6 +4,7 @@ import { spacing } from "@/styles/theme/spacing";
 import { fontSizes, fontWeights } from "@/styles/theme/typography";
 import { IBotao } from "@/types/iBotao";
 import { Button } from "react-bootstrap";
+import "./botao.css"
 
 export default function Botao({
     label,
@@ -41,7 +42,7 @@ export default function Botao({
         <Button
             onClick={onClick}
             disabled={disabled}
-            className={className}
+            className={`botao-custom ${className || ""}`}
             style={buttonStyle}
         >
             {prefixo}
