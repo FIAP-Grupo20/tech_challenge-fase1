@@ -3,7 +3,7 @@
 import { ChangeEvent, useState } from "react";
 import styles from "./page.module.css";
 import InputComponente from "@/components/Input/Input";
-import SelectComponente from "@/components/Input/Select";
+import SelectComponente from "@/components/Select/Select";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import SaldoContainer from "@/components/SaldoContainer/SaldoContainer";
 import ExtratoContainer from "@/components/ExtratoContainer/ExtratoContainer";
@@ -11,6 +11,9 @@ import Botao from "@/components/Botao/Botao";
 import { listaExtratos, opcoesTransacao } from "../../public/assets/mock";
 import { FormularioType } from "@/types/iFormulario";
 import { adicionarTransacao } from "@/utils/transacao";
+import { radii } from "@/styles/theme/radii";
+import { palette } from "@/styles/theme/colors";
+import { fontSizes } from "@/styles/theme/typography";
 
 export default function Home() {
   const [valorInput, setValorInput] = useState<number>(0);
@@ -70,9 +73,9 @@ export default function Home() {
             valor={valor}
           />
 
-          <div style={{ flex: 1, minHeight: "fit-content", borderRadius: "8px" }} className={styles.page}>
+          <div style={{ flex: 1, minHeight: "fit-content", borderRadius: radii.sm, backgroundColor: palette.cinza300 }} className={styles.page}>
             
-            <h4 style={{fontSize: "25px", color: "var(--azul)", fontWeight: 700}}>Nova transação</h4>
+            <h4 style={{fontSize: fontSizes.heading, color: palette.azul700, fontWeight: 700}}>Nova transação</h4>
             <SelectComponente
               value={valorSelect}
               onChange={(e: ChangeEvent<HTMLSelectElement>) =>
@@ -103,10 +106,9 @@ export default function Home() {
             />
 
             <Botao 
-              tipo={"primary"} 
               label={"Adicionar nova transação"} 
               onClick={submeterTransacao}   
-              backgroundColor={"var(--azul)"}          
+              backgroundColor={palette.azul700}          
             />
           </div>
         </div>

@@ -1,21 +1,6 @@
 :root {
-  --cinza: #dee9ea;
-  --cinza-escuro: #CBCBCB;
-  --branco: #f8f8f8;
-  --laranja: #ff5031;
-  --azul: #004d61;
-  --verde: #47A138;
-
   --background: #E4EDE3;
-  --foreground: #171717;
 }
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
 
 html,
 body {

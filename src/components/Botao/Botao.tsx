@@ -1,8 +1,11 @@
+import { palette } from "@/styles/theme/colors";
+import { radii } from "@/styles/theme/radii";
+import { spacing } from "@/styles/theme/spacing";
+import { fontSizes, fontWeights } from "@/styles/theme/typography";
 import { IBotao } from "@/types/iBotao";
 import { Button } from "react-bootstrap";
 
 export default function Botao({
-    tipo,
     label,
     prefixo,
     sufixo,
@@ -21,16 +24,16 @@ export default function Botao({
     backgroundColor,
 }:IBotao) {
     const buttonStyle = {
-        padding: padding ? padding : "16px",
+        padding: padding ? padding : spacing.md,
         margin,
         width,
         height: height ? height : "fit-content",
         border: border ? border : "none",
-        borderRadius: borderRadius ? borderRadius : "8px",
-        fontSize: fontSize ? fontSize : "16px",
-        fontWeight: fontWeight ? fontWeight : "600",
-        color: color ? color : "var(--branco)",
-        backgroundColor: disabled ? '#DEE9EA' : backgroundColor ? backgroundColor : "var(--laranja)",
+        borderRadius: borderRadius ? borderRadius : radii.sm,
+        fontSize: fontSize ? fontSize : fontSizes.body,
+        fontWeight: fontWeight ? fontWeight : fontWeights.medium,
+        color: color ? color : palette.branco,
+        backgroundColor: disabled ? palette.cinza100 : backgroundColor ? backgroundColor : palette.laranja500,
         cursor: "pointer"
     };
 

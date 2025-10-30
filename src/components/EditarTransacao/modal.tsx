@@ -1,12 +1,16 @@
 "use client";
 
 import React, { useState, ChangeEvent, useEffect } from "react";
-import SelectComponente from "@/components/Input/Select";
+import SelectComponente from "@/components/Select/Select";
 import { iEstilos } from "@/types/iEstilos";
 import { opcoesTransacao } from "../../../public/assets/mock";
 import InputComponente from "../Input/Input";
-import { ExtratoItemType, FormularioType } from "@/types/iFormulario";
+import { ExtratoItemType } from "@/types/iFormulario";
 import Botao from "../Botao/Botao";
+import { fontSizes, fontWeights } from "@/styles/theme/typography";
+import { spacing } from "@/styles/theme/spacing";
+import { palette } from "@/styles/theme/colors";
+import { radii } from "@/styles/theme/radii";
 
 export default function ModalEditarTransacao({
   isOpen,
@@ -72,14 +76,13 @@ export default function ModalEditarTransacao({
 
   const modalStyle: iEstilos = {
     height: "auto",
-    padding: "24px",
-    backgroundColor: "#ffffff",
-    color: "#333333",
-    border: "1px solid #cccccc",
-    borderRadius: "8px",
-    fontSize: "16px",
-    fontWeight: "500",
-    fontFamily: "Arial, sans-serif",
+    padding: spacing.lg,
+    backgroundColor: palette.branco,
+    color: palette.cinza800,
+    border:`1px solid ${palette.cinza100}`,
+    borderRadius: radii.sm,
+    fontSize: fontSizes.body,
+    fontWeight: fontWeights.medium,
     textAlign: "left",
   };
 
@@ -99,8 +102,8 @@ export default function ModalEditarTransacao({
       }}
     >
       <div style={modalStyle}>
-        <h2 style={{ marginBottom: "16px" }}>Editar Transação</h2>
-        <form style={{ display: "flex", flexDirection: "column", gap: "16px", color:"var(--azul)"}}>
+        <h2 style={{ marginBottom: spacing.md }}>Editar Transação</h2>
+        <form style={{ display: "flex", flexDirection: "column", gap: spacing.md, color:palette.azul700}}>
           <label>
             Tipo de Transação:
           </label>
@@ -132,17 +135,15 @@ export default function ModalEditarTransacao({
             onChange={(e) => setDescricao(e.target.value)}
             />
 
-          <div style={{ display: "flex", justifyContent: "space-between", gap: "8px" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", gap: spacing.sm, marginTop: spacing.lg }}>
           <Botao 
-            tipo={"primary"} 
             label={"Editar"}
             onClick={handleSave}
             />
             <Botao 
-            tipo={"primary"} 
             label={"Cancelar"}
             onClick={onClose}
-            backgroundColor="var(--azul)"
+            backgroundColor={palette.azul700}
             />
           </div>
         </form>
