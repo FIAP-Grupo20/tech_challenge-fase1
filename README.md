@@ -114,4 +114,4 @@ Um vídeo de até 5 minutos foi gravado para demonstrar todo o fluxo do front-en
 
 ***
 
-Feito por **Isabelle D. R. Silva (RM367409), Kevin L. Santos (RM) e Mariana Ayumi Tamay (RM).**
+Feito por **Isabelle D. R. Silva (RM367409), Kevin L. Santos (RM) e Mariana Ayumi Tamay (RM367047).**
