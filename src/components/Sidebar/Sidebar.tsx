@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { iSidebar, iSidebarLink } from "@/types/iSidebar";
+import { fontSizes, fontWeights } from "@/styles/theme/typography";
+import { palette } from "@/styles/theme/colors";
+import { spacing } from "@/styles/theme/spacing";
+import { radii } from "@/styles/theme/radii";
 
 const defaultLinks: iSidebarLink[] = [
   { href: "#", label: "Início" },
@@ -19,14 +23,14 @@ export default function SidebarComponente(props: iSidebar) {
   const sidebarStyle: React.CSSProperties = {
     // Props de iEstilos
     width: props.width || "200px",
-    backgroundColor: props.backgroundColor || "var(--branco)",
-    color: props.color || "var(--azul)",
+    backgroundColor: props.backgroundColor || palette.branco,
+    color: props.color || palette.azul700,
     height: props.height || "100%",
-    padding: props.padding || "16px",
+    padding: props.padding || spacing.md,
     margin: props.margin || "0px 0px 24px 0px",
     border: props.border,
-    borderRadius: props.borderRadius || "8px",
-    fontSize: props.fontSize || "16px",
+    borderRadius: props.borderRadius || radii.sm,
+    fontSize: props.fontSize || fontSizes.body,
     fontWeight: props.fontWeight,
     fontFamily: props.fontFamily,
     textAlign: props.textAlign,
@@ -34,7 +38,7 @@ export default function SidebarComponente(props: iSidebar) {
     // Props do iSidebar
     display: props.display || "flex",
     flexDirection: props.flexDirection || "column",
-    gap: props.gap || "12px",
+    gap: props.gap || spacing.mds,
     position: props.position || "relative",
     top: props.top || 0,
     left: props.left || 0,
@@ -72,18 +76,18 @@ export default function SidebarComponente(props: iSidebar) {
 
             const dividerStyle: React.CSSProperties = {
               height: "1px",
-              backgroundColor: "var(--azul)",
-              marginLeft: "32px",
-              marginRight: "32px",
+              backgroundColor: palette.azul700,
+              marginLeft: spacing.xl,
+              marginRight: spacing.xl,
             };
 
             const dynamicLinkStyle: React.CSSProperties = {
               ...baseLinkStyle,
-              fontWeight: isActive ? 700 : "normal",
+              fontWeight: isActive ? fontWeights.bold : fontWeights.regular,
             };
 
             return (
-              <li>
+              <li key={link.label}>
                 <Link
                   href={link.href}
                   style={dynamicLinkStyle}

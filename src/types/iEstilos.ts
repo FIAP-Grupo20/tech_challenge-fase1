@@ -17,7 +17,7 @@ export interface iBorda {
 
 export interface iFontes {
   fontSize?: string;
-  fontWeight?: string;
+  fontWeight?: string | number;
   fontFamily?: string;
   textAlign?: "left" | "right" | "center" | "justify";
 }
