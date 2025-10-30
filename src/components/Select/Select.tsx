@@ -1,13 +1,17 @@
+import { palette } from "@/styles/theme/colors";
+import { radii } from "@/styles/theme/radii";
+import { spacing } from "@/styles/theme/spacing";
+import { fontSizes, fontWeights } from "@/styles/theme/typography";
 import { iSelect } from "@/types/iSelect";
 import { Form } from "react-bootstrap";
 
 export default function SelectComponente(props: iSelect) {
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+    <div style={{ display: "flex", flexDirection: "column", gap: spacing.md }}>
       {props.label && (
         <Form.Label
           htmlFor={props.id}
-          style={{ fontWeight: "600", fontSize: "16px", color: "var(--cinza)" }}
+          style={{ fontWeight: fontWeights.medium, fontSize: fontSizes.body, color: palette.cinza100}}
         >
           {props.label}
         </Form.Label>
@@ -22,11 +26,11 @@ export default function SelectComponente(props: iSelect) {
           width: props.width || "100%",
           margin: props.margin || "0",
           padding: props.padding || "12px 16px",
-          backgroundColor: props.backgroundColor || "var(--branco)",
-          border: props.border || "1px solid var(--azul)",
-          borderRadius: props.borderRadius || "8px",
-          color: props.color || "#444444",
-          fontSize: props.fontSize || "16px",
+          backgroundColor: props.backgroundColor || palette.branco,
+          border: props.border || `1px solid ${palette.azul700}`,
+          borderRadius: props.borderRadius || radii.sm,
+          color: props.color || palette.cinza800,
+          fontSize: props.fontSize || fontSizes.body,
           textAlign: props.textAlign || "left",
         }}
       >

@@ -4,11 +4,12 @@ import styles from './ExtratoContainer.module.css'
 import { Pen, Trash } from 'lucide-react'
 import { useState } from 'react'
 import dayjs from 'dayjs'
-import { listaExtratos } from '../../../public/assets/mock'
 import Botao from '../Botao/Botao'
 import { editarTransacao, ExtratoMensalType, removerTransacao } from '@/utils/transacao'
-import { ExtratoItemType, FormularioType } from '@/types/iFormulario'
+import { ExtratoItemType } from '@/types/iFormulario'
 import ModalEditarTransacao from '../EditarTransacao/modal'
+import { fontSizes, fontWeights } from '@/styles/theme/typography'
+import { palette } from '@/styles/theme/colors'
 
 interface ExtratoContainerProps {
     extratos: ExtratoMensalType;
@@ -41,9 +42,9 @@ export default function ExtratoContainer({ extratos, setExtratos }: ExtratoConta
         setExtratos(novosExtratos);
     };
     return (
-        <div className={styles.extratoContainer}>
+        <div className={styles.extratoContainer} style={{backgroundColor: palette.branco}}>
             <div className={styles.extratoHeader}>
-                <h1>
+                <h1 style={{fontWeight: fontWeights.bold, fontSize: fontSizes.heading}}>
                     Extrato
                 </h1>
             </div>
@@ -51,40 +52,38 @@ export default function ExtratoContainer({ extratos, setExtratos }: ExtratoConta
                 {extratos.map((extrato, index) => (
                     <div key={index}>
                         <div className={styles.extratoMes}>
-                            <h5>{extrato.mes}</h5>
+                            <h5 style={{fontWeight: fontWeights.medium, fontSize: fontSizes.small, color: palette.verde500}}>{extrato.mes}</h5>
                             {extrato.extratos.map((item, idx) => (
                                 <div key={idx}>
                                     <div className={styles.extratoDia}>
                                         <div className={styles.extratoDiaHeader}>
-                                            <p>{item.descricao} - {dayjs(item.data).format("DD/MM/YYYY")}</p>
-                                            <h5>R$ {item.tipo != "deposito" ? "-" : ""} {item.valor}</h5>
+                                            <p style={{fontWeight: fontWeights.regular, fontSize: fontSizes.body}}>{item.descricao} - {dayjs(item.data).format("DD/MM/YYYY")}</p>
+                                            <h5 style={{fontWeight: fontWeights.medium, fontSize: fontSizes.body}}>R$ {item.tipo != "deposito" ? "-" : ""} {item.valor}</h5>
                                         </div>
                                         <div style={{ display: "flex", gap: "5px" }}>
                                             <Botao
-                                                tipo={'primary'}
                                                 label={''}
                                                 onClick={() => showModal(item)}
                                                 prefixo={<Pen />}
-                                                backgroundColor='var(--azul)'
+                                                backgroundColor={palette.azul700}
                                                 borderRadius='100%'
                                                 padding="11px"
-                                                color="var(--branco)"
+                                                color={palette.branco}
                                                 border="none"
                                             />
                                             <Botao
-                                                tipo={'primary'}
                                                 label={''}
                                                 prefixo={<Trash />}
-                                                backgroundColor='var(--laranja)'
+                                                backgroundColor={palette.laranja500}
                                                 borderRadius='100%'
                                                 border='none'
                                                 padding="11px"
                                                 onClick={() => handleDelete(item.id)}
-                                                color="var(--branco)"
+                                                color={palette.branco}
                                             />
                                         </div>
                                     </div>
-                                    <hr style={{ borderColor: "var(--verde)", margin: "5px 0px" }} />
+                                    <hr style={{ borderColor: palette.verde500, margin: "5px 0px" }} />
                                 </div>
                             ))}
                         </div>

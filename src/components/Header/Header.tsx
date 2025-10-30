@@ -2,6 +2,8 @@
 import React from 'react';
 import { iEstilos } from "@/types/iEstilos";
 import { CircleUserRound } from 'lucide-react';
+import { fontSizes, fontWeights } from '@/styles/theme/typography';
+import { palette } from '@/styles/theme/colors';
 
 interface HeaderProps extends iEstilos {
     clientName: string;
@@ -11,8 +13,8 @@ export default function HeaderComponente(props: HeaderProps) {
     const { clientName } = props;
 
     const headerStyle: React.CSSProperties = {
-        backgroundColor: props.backgroundColor || "var(--azul)",
-        color: props.color || "var(--branco)",
+        backgroundColor: props.backgroundColor || palette.azul700,
+        color: props.color || palette.branco,
         padding: props.padding || "16px 10vw",
         display: "flex",
         justifyContent: "end",
@@ -23,8 +25,8 @@ export default function HeaderComponente(props: HeaderProps) {
     };
 
     const clientNameStyle: React.CSSProperties = {
-        fontSize: "14px",
-        fontWeight: "500",
+        fontSize: fontSizes.small,
+        fontWeight: fontWeights.medium,
         margin: 0,
     };
 
@@ -32,8 +34,8 @@ export default function HeaderComponente(props: HeaderProps) {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        fontWeight: "bold",
-        color: "var(--laranja)",
+        fontWeight: fontWeights.bold,
+        color: palette.laranja500,
         overflow: "hidden",
     };
 

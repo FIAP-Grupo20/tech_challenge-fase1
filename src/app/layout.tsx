@@ -1,13 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
 import Header from "@/components/Header/Header";
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-inter",
-});
+import "../styles/globals.css"
+import { firaCode, inter } from "@/styles/fonts";
 
 export const metadata: Metadata = {
   title: "Bytebank",
@@ -26,7 +20,7 @@ export default function RootLayout({
         <link rel="icon" href="./icon.svg" type="image/svg" />
       </head>
 
-      <body className={`${inter.variable}`}>
+      <body className={`${inter.variable} ${firaCode.variable}`}>
       <Header 
         clientName={userName} 
       />
