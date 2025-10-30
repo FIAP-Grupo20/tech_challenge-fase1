@@ -106,7 +106,7 @@ Conforme o requisito, foi criado um Design System para garantir consistência vi
 
 A documentação completa, detalhando os **Design Tokens** (cores, tipografia, espaçamento) e a **API dos Componentes React**, está disponível em nosso **GitBook**.
 
-**➡️** [**Acesse a documentação do Design System aqui**](https://app.gitbook.com/o/XUivLOXurmq6jKJhQ94T/s/uNtwr5pD8iinuOEvRkt2/)
+**➡️** [**Acesse a documentação do Design System aqui**](https://fiap-grupo-20.gitbook.io/tech-challenge-1-design-system/)
 
 <br />
 
