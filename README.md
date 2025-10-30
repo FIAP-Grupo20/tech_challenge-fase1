@@ -1,14 +1,12 @@
-# README
-
-<h2 align="center">Tech Challenge - Fase 01: Gerenciador Financeiro</h2>
+<h1 align="center">Tech Challenge - Fase 01: Gerenciador Financeiro</h2>
 
 Projeto desenvolvido para o **Tech Challenge da Fase 01** da Pós-Graduação em **Frontend Engineering** da Pós Tech FIAP.
 
 O objetivo é um front-end para uma aplicação de gerenciamento financeiro. A interface permite que os usuários gerenciem suas transações financeiras, utilizando **Next.js** e um **Design System** documentado.
 
-***
+<br />
 
-### 📖 Índice
+## 📖 Índice
 
 * 🎯 Sobre o Projeto
 * ✨ Features (Requisitos)
@@ -17,15 +15,15 @@ O objetivo é um front-end para uma aplicação de gerenciamento financeiro. A i
 * 🎨 Design System
 * 🎥 Vídeo Demonstrativo
 
-***
+<br />
 
-### 🎯 Sobre o Projeto
+## 🎯 Sobre o Projeto
 
 Este projeto foca na construção de uma interface rica e funcional para um app financeiro. Embora um [link do Figma](https://www.figma.com/design/ns5TC3X5Xr8V713LYKg9KA/Projeto-Financeiro?node-id=503-4264\&t=qZy56WDAUfXtS23Y-1) tenha sido fornecido como referência, o desenvolvimento priorizou a **consistência visual, boa usabilidade e acessibilidade**, não seguindo o layout de forma estrita. O back-end da aplicação é simulado, com dados mockados diretamente no front-end.
 
-***
+<br />
 
-### ✨ Features (Requisitos)
+## ✨ Features (Requisitos)
 
 O projeto cumpre com os seguintes requisitos funcionais:
 
@@ -43,9 +41,9 @@ O projeto cumpre com os seguintes requisitos funcionais:
 * **Editar Transação:**
   * Um modal para editar as informações de uma transação existente.
 
-***
+<br />
 
-### 🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 
 Este projeto foi construído utilizando as seguintes tecnologias obrigatórias e ferramentas:
 
@@ -56,16 +54,16 @@ Este projeto foi construído utilizando as seguintes tecnologias obrigatórias e
 * **GitBook:** Ferramenta para documentar os componentes do Design System.
 * **Bootstrap:** Utilizado para agilizar o desenvolvimento do layout macro e para classes utilitárias.
 
-***
+<br />
 
-### 🚀 Começando (Executando o Projeto)
+## 🚀 Começando (Executando o Projeto)
 
-#### Pré-requisitos
+### Pré-requisitos
 
 * [Node.js](https://nodejs.org/) (versão 18.x ou superior)
 * [Yarn](https://yarnpkg.com/) ou [npm](https://www.npmjs.com/)
 
-#### Instalação
+### Instalação
 
 1.  Clone o repositório:
 
@@ -85,7 +83,7 @@ Este projeto foi construído utilizando as seguintes tecnologias obrigatórias e
     yarn install
     ```
 
-#### Executando a aplicação
+### Executando a aplicação
 
 1.  Inicie o servidor de desenvolvimento:
 
@@ -96,9 +94,9 @@ Este projeto foi construído utilizando as seguintes tecnologias obrigatórias e
     ```
 2. Abra [http://localhost:3000](http://localhost:3000) em seu navegador para ver a aplicação.
 
-***
+<br />
 
-### 🎨 Design System
+## 🎨 Design System
 
 Conforme o requisito, foi criado um Design System para garantir consistência visual e reutilização de componentes.
 
@@ -106,9 +104,9 @@ A documentação completa, detalhando os **Design Tokens** (cores, tipografia, e
 
 **➡️** [**Acesse a documentação do Design System aqui**](https://app.gitbook.com/o/XUivLOXurmq6jKJhQ94T/s/uNtwr5pD8iinuOEvRkt2/)
 
-***
+<br />
 
-### 🎥 Vídeo Demonstrativo
+## 🎥 Vídeo Demonstrativo
 
 Um vídeo de até 5 minutos foi gravado para demonstrar todo o fluxo do front-end, incluindo navegação, listagem, adição, edição e exclusão de transações, conforme solicitado.
 
