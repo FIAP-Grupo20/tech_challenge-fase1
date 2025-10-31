@@ -1,7 +1,5 @@
 <h1 align="center">Tech Challenge - Fase 01: Gerenciador Financeiro</h2>
 
-Projeto desenvolvido para o **Tech Challenge da Fase 01** da Pós-Graduação em **Frontend Engineering** da Pós Tech FIAP.
-
 O objetivo é um front-end para uma aplicação de gerenciamento financeiro. A interface permite que os usuários gerenciem suas transações financeiras, utilizando **Next.js** e um **Design System** documentado.
 
 <br />
@@ -19,7 +17,7 @@ O objetivo é um front-end para uma aplicação de gerenciamento financeiro. A i
 
 ## 🎯 Sobre o Projeto
 
-Este projeto foca na construção de uma interface rica e funcional para um app financeiro. Embora um [link do Figma](https://www.figma.com/design/ns5TC3X5Xr8V713LYKg9KA/Projeto-Financeiro?node-id=503-4264\&t=qZy56WDAUfXtS23Y-1) tenha sido fornecido como referência, o desenvolvimento priorizou a **consistência visual, boa usabilidade e acessibilidade**, não seguindo o layout de forma estrita. O back-end da aplicação é simulado, com dados mockados diretamente no front-end.
+Este projeto foca na construção de uma interface rica e funcional para um app financeiro. Embora um [link do Figma](https://www.figma.com/design/ns5TC3X5Xr8V7I3LYKg9KA/Projeto-Financeiro?node-id=80-199&p=f&t=Y821nsQ9qA67Fg4v-0) tenha sido fornecido como referência, o desenvolvimento priorizou a **consistência visual, boa usabilidade e acessibilidade**, não seguindo o layout de forma estrita. O back-end da aplicação é simulado, com dados mockados diretamente no front-end.
 
 <br />
 
@@ -51,7 +49,7 @@ O projeto cumpre com os seguintes requisitos funcionais:
 
 Este projeto foi construído utilizando as seguintes tecnologias obrigatórias e ferramentas:
 
-* [**Next.js**](https://nextjs.org/)**:** Framework React usado para estruturar e organizar o projeto\[cite: 35].
+* [**Next.js**](https://nextjs.org/)**:** Framework React usado para estruturar e organizar o projeto.
 * [**React**](https://reactjs.org/)**:** Biblioteca principal para a construção da interface.
 * **CSS Modules:** Usado para estilos específicos de páginas ou componentes.
 * **Styled-Components:** Usado para criar componentes de UI reutilizáveis e "tokenizados", que formam o núcleo do nosso sistema.
@@ -106,7 +104,7 @@ Conforme o requisito, foi criado um Design System para garantir consistência vi
 
 A documentação completa, detalhando os **Design Tokens** (cores, tipografia, espaçamento) e a **API dos Componentes React**, está disponível em nosso **GitBook**.
 
-**➡️** [**Acesse a documentação do Design System aqui**](https://fiap-grupo-20.gitbook.io/tech-challenge-1-design-system/)
+➡️ [Acesse a documentação do Design System aqui](https://fiap-grupo-20.gitbook.io/tech-challenge-1-design-system/)
 
 <br />
 
@@ -118,4 +116,4 @@ Um vídeo de até 5 minutos foi gravado para demonstrar todo o fluxo do front-en
 
 ***
 
-Feito por **Isabelle D. R. Silva (RM367409), Kevin L. Santos (RM369050) e Mariana Ayumi Tamay (RM367047).**
+Feito por **Isabelle D. R. Silva (RM367409), Kevin L. Santos (RM369050), Mariana Ayumi Tamay (RM367047) e Pedro Henrique Moura (RM).**
