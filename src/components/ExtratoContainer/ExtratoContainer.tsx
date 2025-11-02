@@ -42,13 +42,13 @@ export default function ExtratoContainer({ extratos, setExtratos }: ExtratoConta
         setExtratos(novosExtratos);
     };
     return (
-        <div className={styles.extratoContainer} style={{backgroundColor: palette.branco}}>
+        <div className={styles.extratoContainer} style={{backgroundColor: palette.branco,color: "black"}}>
             <div className={styles.extratoHeader}>
                 <h1 style={{fontWeight: fontWeights.bold, fontSize: fontSizes.heading}}>
                     Extrato
                 </h1>
             </div>
-            <div className={styles.extratoLista} style={{color: "black"}}>
+            <div className={styles.extratoLista}>
                 {extratos.map((extrato, index) => (
                     <div key={index}>
                         <div className={styles.extratoMes}>
