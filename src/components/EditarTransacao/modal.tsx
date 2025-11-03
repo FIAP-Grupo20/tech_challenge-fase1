@@ -11,6 +11,7 @@ import { fontSizes, fontWeights } from "@/styles/theme/typography";
 import { spacing } from "@/styles/theme/spacing";
 import { palette } from "@/styles/theme/colors";
 import { radii } from "@/styles/theme/radii";
+import styles from "./modal.module.css";
 
 export default function ModalEditarTransacao({
   isOpen,
@@ -43,16 +44,6 @@ export default function ModalEditarTransacao({
   }, [extratoData]);
 
   const handleSave = () => {
-    if (!tipoTransacao || !valor || !descricao) {
-      alert("Preencha todos os campos e insira um valor válido e positivo.");
-      return;
-    }
-
-    if (valor <= 0 ) {
-      alert("Valor não pode ser menou ou igual a zero. Por favor, insira um valor válido.");
-        return;
-    }
-
     if (!extratoData) {
       alert("Não foi possível carregar os dados para a edição");
         return;
@@ -139,6 +130,7 @@ export default function ModalEditarTransacao({
           <Botao 
             label={"Editar"}
             onClick={handleSave}
+            disabled={!tipoTransacao || !valor || valor <= 0 || !descricao}
             />
             <Botao 
             label={"Cancelar"}
