@@ -10,6 +10,7 @@ import { ExtratoItemType } from '@/types/iFormulario'
 import ModalEditarTransacao from '../EditarTransacao/modal'
 import { fontSizes, fontWeights } from '@/styles/theme/typography'
 import { palette } from '@/styles/theme/colors'
+import Alerta from '../Alerta/Alerta'
 
 interface ExtratoContainerProps {
     extratos: ExtratoMensalType;
@@ -17,7 +18,8 @@ interface ExtratoContainerProps {
 }
 
 export default function ExtratoContainer({ extratos, setExtratos }: ExtratoContainerProps) {
-
+    const [mostrarAlerta, setMostrarAlerta] = useState<boolean>(false);
+    const [mostrarAlertaDelete, setMostrarAlertaDelete] = useState<boolean>(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedItem, setSelectedItem] = useState<ExtratoItemType | null>(null);
 
@@ -33,6 +35,11 @@ export default function ExtratoContainer({ extratos, setExtratos }: ExtratoConta
     const handleEditFinish = (itemEditado: ExtratoItemType) => {
         const novosExtratos = editarTransacao(extratos, itemEditado);
         setExtratos(novosExtratos);
+        setMostrarAlerta(true);
+
+        setTimeout(() => {
+            setMostrarAlerta(false);
+        }, 3000);
         setIsModalOpen(false);
         setSelectedItem(null);
     };
@@ -40,9 +47,25 @@ export default function ExtratoContainer({ extratos, setExtratos }: ExtratoConta
     const handleDelete = (itemId: number) => {
         const novosExtratos = removerTransacao(extratos, itemId);
         setExtratos(novosExtratos);
+        setMostrarAlertaDelete(true);
+        setTimeout(() => {
+            setMostrarAlertaDelete(false);
+        }, 3000);
     };
     return (
         <div className={styles.extratoContainer} style={{backgroundColor: palette.branco}}>
+            {mostrarAlerta && (
+                <Alerta
+                    tipo="aviso"
+                    mensagem="🎉 Sucesso! Transação editada com êxito."
+                />
+            )}
+            {mostrarAlertaDelete && (
+                <Alerta
+                    tipo="alerta"
+                    mensagem="🎉 Sucesso! Transação excluída com êxito."
+                />
+            )}
             <div className={styles.extratoHeader}>
                 <h1 style={{fontWeight: fontWeights.bold, fontSize: fontSizes.heading}}>
                     Extrato
