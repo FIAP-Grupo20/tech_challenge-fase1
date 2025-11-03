@@ -80,8 +80,8 @@ export default function ExtratoContainer({ extratos, setExtratos }: ExtratoConta
                                 <div key={idx}>
                                     <div className={styles.extratoDia}>
                                         <div className={styles.extratoDiaHeader}>
-                                            <p style={{fontWeight: fontWeights.regular, fontSize: fontSizes.body}}>{item.descricao} - {dayjs(item.data).format("DD/MM/YYYY")}</p>
-                                            <h5 style={{fontWeight: fontWeights.medium, fontSize: fontSizes.body}}>R$ {item.tipo != "deposito" ? "-" : ""} {item.valor}</h5>
+                                            <p style={{fontWeight: fontWeights.regular, fontSize: fontSizes.body, color: palette.preto}}>{item.descricao} - {dayjs(item.data).format("DD/MM/YYYY")}</p>
+                                            <h5 style={{fontWeight: fontWeights.medium, fontSize: fontSizes.body, color: palette.preto}}>R$ {item.tipo != "deposito" ? "-" : ""} {item.valor}</h5>
                                         </div>
                                         <div style={{ display: "flex", gap: "5px" }}>
                                             <Botao
