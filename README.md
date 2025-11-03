@@ -102,9 +102,9 @@ Este projeto foi construído utilizando as seguintes tecnologias obrigatórias e
 
 Conforme o requisito, foi criado um Design System para garantir consistência visual e reutilização de componentes.
 
-A documentação completa, detalhando os **Design Tokens** (cores, tipografia, espaçamento) e a **API dos Componentes React**, está disponível em nosso **GitBook**.
+A documentação completa, detalhando os **Design Tokens** (cores, tipografia, espaçamento) e os compoenentes, está disponível em nosso **GitBook**.
 
-➡️ [Acesse a documentação do Design System aqui](https://fiap-grupo-20.gitbook.io/tech-challenge-1-design-system/)
+➡️ [Acesse a documentação do Design System aqui.](https://fiap-grupo-20.gitbook.io/tech-challenge-1-design-system/)
 
 <br />
 
@@ -112,7 +112,9 @@ A documentação completa, detalhando os **Design Tokens** (cores, tipografia, e
 
 Um vídeo de até 5 minutos foi gravado para demonstrar todo o fluxo do front-end, incluindo navegação, listagem, adição, edição e exclusão de transações, conforme solicitado.
 
-**\[Link para o seu vídeo (YouTube, Loom, Google Drive)]**
+➡️ [Assista ao vídeo demonstrativo aqui.](https://www.youtube.com/watch?v=7yawItuhJDM)
+
+<br />
 
 ***
 
