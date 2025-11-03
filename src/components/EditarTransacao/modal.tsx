@@ -92,7 +92,7 @@ export default function ModalEditarTransacao({
         zIndex: 1000,
       }}
     >
-      <div style={modalStyle}>
+      <div style={modalStyle} className={styles.modal}>
         <h2 style={{ marginBottom: spacing.md }}>Editar Transação</h2>
         <form style={{ display: "flex", flexDirection: "column", gap: spacing.md, color:palette.azul700}}>
           <label>
