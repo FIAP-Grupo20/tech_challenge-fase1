@@ -32,9 +32,9 @@ export default function Botao({
         borderRadius: borderRadius ? borderRadius : radii.sm,
         fontSize: fontSize ? fontSize : fontSizes.body,
         fontWeight: fontWeight ? fontWeight : fontWeights.medium,
-        color: color ? color : palette.branco,
+        color: disabled ? palette.cinza300 : color ? color : palette.branco,
         backgroundColor: disabled ? palette.cinza100 : backgroundColor ? backgroundColor : palette.laranja500,
-        cursor: "pointer"
+        cursor: disabled ? "not-allowed" : "pointer"
     };
 
     return (

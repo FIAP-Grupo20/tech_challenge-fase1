@@ -14,11 +14,13 @@ import { adicionarTransacao } from "@/utils/transacao";
 import { radii } from "@/styles/theme/radii";
 import { palette } from "@/styles/theme/colors";
 import { fontSizes } from "@/styles/theme/typography";
+import Alerta from "@/components/Alerta/Alerta";
 
 export default function Home() {
   const [valorInput, setValorInput] = useState<number>(0);
   const [descricao, setDescricao] = useState<string>("");
   const [valorSelect, setValorSelect] = useState<string>("");
+  const [mostrarAlerta, setMostrarAlerta] = useState<boolean>(false);
 
   const userName = "Joana da Silva Oliveira";
   const firstName = userName.split(' ')[0];
@@ -33,25 +35,19 @@ export default function Home() {
   };
 
   const submeterTransacao = () => {
-    if (!valorInput || !descricao || !valorSelect) {
-      alert("Preencha todos os campos da transação.");
-      return;
-    }
-
-    if (valorInput <= 0) {
-      alert("Valor não pode ser menou ou igual a zero. Por favor, insira um valor válido.");
-      return;
-    }
-
     const novaTransacao: FormularioType = {
       valor: valorInput,
       tipo: valorSelect,
       descricao: descricao,
     };
-
-    console.log(novaTransacao)
     
     handleTransactionSubmit(novaTransacao);
+
+    setMostrarAlerta(true);
+
+    setTimeout(() => {
+      setMostrarAlerta(false);
+    }, 3000);
 
     setValorInput(0);
     setDescricao("");
@@ -65,7 +61,14 @@ export default function Home() {
         <Sidebar width={"100%"} height="" />
 
         <div className={styles.conteudoContainer}>
-
+          
+          {mostrarAlerta && (
+            <Alerta
+              tipo="sucesso"
+              mensagem="🎉 Sucesso! Transação adicionada com êxito."
+            />
+          )}
+          
           <SaldoContainer
             height="40%"
             key={firstName}
@@ -109,6 +112,7 @@ export default function Home() {
               label={"Adicionar nova transação"} 
               onClick={submeterTransacao}   
               backgroundColor={palette.azul700}          
+              disabled={!valor || valor <= 0 || !descricao || !valorSelect}
             />
           </div>
         </div>
