@@ -9,7 +9,7 @@ export default function InputComponente(props: iInput) {
   return (
     <InputGroup style={{ display: "flex", flexDirection: "column", gap: spacing.md }}>
       {props.label && (
-        <Form.Label htmlFor={props.id} style={{fontWeight: fontWeights.medium, fontSize: fontSizes.body, color: "var(--azul)"}}>
+        <Form.Label htmlFor={props.id} style={{fontWeight: fontWeights.medium, fontSize: fontSizes.body, color: palette.azul700}}>
           {props.label}
         </Form.Label>
       )}
